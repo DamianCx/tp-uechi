@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* estilo de la barra de navegacion */
+ .max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu',sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: #DC1F25;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo{
+    height: 150;
+    width: 200; 
+
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #DC1F25;
+
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+/* menu btn estilo */
+.menu-btn{
+    color: black ;
+    font-size: 23px ;
+    cursor: pointer;
+    display: none;
+}
+/* aca inicia la seccion inicio */
+.inicio{
+    display: flex;
+    background: url("fondodeinicio.jpeg") no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 500px;
+}
+.inicio .max-width{
+    margin: auto 0 auto 40px;
+}
+.inicio .inicio-contenido .text-1{
+    font-size: 50px;
+    color:black;
+
+}
+.inicio .inicio-contenido .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    color:black;
+}
+.inicio .inicio-contenido .text-3{
+    font-size: 35px;
+    margin: 5px 0;  
+    color:black;
+
+}
+.inicio .inicio-contenido a{
+    display: inline-block;
+    background: #DC1F25;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #DC1F25;
+    transition: all 0.3s ease;
+
+}
+.inicio .inicio-contenido a:hover{
+  color: #DC1F25;
+  background: none;
+}
+/* aca continua el inicio2 */
+
+section{
+    padding:100px 0;
+}
+.inicio2{
+    font-family: 'Poppins',sans-serif;
+}
+.inicio2 .titulo{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight:500 ;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+     font-family: 'Ubuntu',sans-serif;
+}
+.inicio2 .titulo::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left:50%;
+  width: 370px;
+  height: 3px;
+  background: #111;
+  transform:translateX(-50%)
+
+}
+.inicio2 .titulo::after{
+    content: "Sensei";
+    position: absolute;
+    bottom: -12px;
+    left:50%;
+    font-size: 20px;
+    color:#DC1F25;
+   padding: 5px;
+    background: #fff;
+    transform:translateX(-50%)
+  
+  }
+
+.inicio2 .inicio2-contenido{ 
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; 
+      justify-content: space-between;
+} 
+
+.inicio2 .inicio2-contenido .column-left{
+ width: 45%;
+}
+
+.inicio2 .inicio2-contenido .column-left img{
+  height: 530px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.inicio2 .inicio2-contenido .column-right{ 
+    width: 55%;
+ }
+.inicio2 .inicio2-contenido .column-right .text{
+font-size: 25px;
+font-weight: 600;
+margin-bottom: 10px
+}
+.inicio2 .inicio2-contenido .column-right .text span{
+    color: #111;
+}
+.inicio2 .inicio2-contenido .column-right p{
+    text-align: justify;
+
+}
+.inicio2 .inicio2-contenido .column-right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20spx;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.inicio2 .inicio2-contenido .column-right a:hover{
+    color:crimson;
+    background: none;
+
+}
+
+
+
+
+
+ /* responsive @media */
+
+@media (max-width: 1104px) {
+
+.inicio2 .inicio-contenido .column-left img{
+    height: 350px;
+    width: 350px;
+   
+ }
+}
+
+
+@media (max-width: 991px) {
+      .max-width{
+    padding: 0 50px;
+   }
+   
+}
+
+
+@media (max-width: 947px){
+   
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width:100%;
+        left: -100%;
+        top: 0;
+        background: #fff;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    } 
+    .navbar .menu.active{
+        left: 0%;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .inicio .inicio-contenido .text-2{
+        font-size: 70px;
+        color:black;
+    }
+    .inicio .inicio-contenido .text-3{
+        font-size: 35px;
+          color:black;
+    
+    }
+    .inicio .inicio-contenido a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+}
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+       }
+ .inicio .inicio-contenido .text-2{
+    font-size: 60px;
+    color:black;
+}
+.inicio .inicio-contenido .text-3{
+    font-size: 32px;
+      color:black;
+
+}
+.inicio .inicio-contenido a{
+    font-size: 20px;
+   
+}
+.max-width{
+    max-width: 800px;
+  }
+.inicio2 .inicio2-contenido .column{
+    width: 1000%;
+
+}
+.inicio2 .inicio2-contenido .column-left{
+   display: flex;
+   justify-content: center;
+   margin: 0 auto 60px;
+
+
+}
+.inicio2 .inicio2-contenido .column-right{
+  flex: 100%;
+
+
+}
+}
+@media (max-width: 500px) {
+   
+.inicio .inicio-contenido .text-2{
+    font-size: 50px;
+    color:black;
+   }
+.inicio .inicio-contenido .text-3{
+    font-size: 27px;
+      color:black;
+
+    } 
+}
+
+/* aca inicia Seccion Dojos*/
+
+
+.dojo{
+    
+    background: url("fondodeinicio.jpeg") no-repeat center;
+   
+    background-size: cover;
+    background-attachment: fixed;
+    color: #111;
+    min-height: 500px;
+    
+}
+.dojo-contenido .max-width{
+   /* margin: center;*/
+   
+   margin: auto 0 auto 40px;
+}
+
+
+.titulo{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 50;
+    color: #111;
+    margin-top: auto;
+    font-weight: 100 ;
+}
+
+.contenedor{
+    width: 100;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: auto;
+
+}
+.contenedor .cards{
+    width: 330px;
+    height: 430px;
+    border-radius: 6;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    
+}
+.contenedor .cards:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+.contenedor .cards iframe{
+    width: 330px;
+    height: 220px;
+
+}
+.contenedor .cards h4{
+    font-weight: 600;
+    
+}
+.contenedor .card .p{
+    padding: 0 1rem;
+    font-size: 16px;
+    
+    text-align: right;
+}
+
+.contenedor .card .p span{
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* aca arranca la seccion historia*/
+.historia{
+    font-family: 'Poppins',sans-serif;
+    background: url("fondodeinicio.jpeg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+   
+   
+   
+}
+.historia .titulo{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight:500 ;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+     font-family: 'Ubuntu',sans-serif;
+}
+.historia .historia-contenido{ 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: space-between;
+} 
+.historia .historia-contenido .column-left{
+    width: 60%;
+   }
+   
+   .historia .historia-contenido .column-left img{
+     height: 220px;
+     width: 330px;
+     object-fit: cover;
+     border-radius: 7px;
+   }
+.inicio2 .inicio2-contenido .column-right{ 
+    width: 55%;
+ }
+.inicio2 .inicio2-contenido .column-right .text-4{
+font-size: 25px;
+font-weight: 600;
+margin-bottom: 10px;
+} 
+.inicio2 .inicio2-contenido .column-right{
+    text-align: justify;
+
+}
+
+/* aca arranca el formulario*/
+
+
+.contacto{
+    display: flex;
+    background: url("fondodeinicio.jpeg") no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 500px;
+}
+.contacto .max-width{
+   /* margin: center; */
+   
+    margin: auto;
+}
+
+.form{
+    background-color: #fff;
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+}
+.form_container{
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+.form_title{
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: .4em;
+    color: black;
+}
+.form_input{
+    font-family:'Ubuntu',sans-serif;
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid #DC1F25 ;
+    border-radius: 0.2em;
+
+}
+.form_input--message{
+    resize: none;
+    padding: 1.8em 1em;
+    margin-bottom: .5em;
+}
+.form_cta{
+    font-family:'Ubuntu',sans-serif;
+    background-color: #DC1F25;
+    color: #fff;
+    border:none;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: .7em 0; 
+    border-radius: .2em;
+    border: 2px solid #DC1F25;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+.form_cta:hover{
+    color: black;
+    background: none;
+}
+
+
+/* footer seccion */
+
+footer {
+    background:#DC1F25;
+    padding: 15px 0px;
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.redsoc{
+    
+    color:white;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0px 6px;
+    
+}
+.redsoc a {
+    color:black;
+    margin: 0px 6px;
+    font-size: 2vw;
+}
+.redsoc a:hover{
+    color: black;
+
+}
